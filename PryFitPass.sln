@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AccesoDatos", "AccesoDatos"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PryPresentacion", "PryPresentacion\PryPresentacion.csproj", "{FC8B8813-BFEE-4EA2-B09D-866175205633}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PryAccesoDatos", "PryAccesoDatos\PryAccesoDatos.csproj", "{16CA2432-3C5D-4867-99F9-46ED72B447FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{FC8B8813-BFEE-4EA2-B09D-866175205633}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC8B8813-BFEE-4EA2-B09D-866175205633}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC8B8813-BFEE-4EA2-B09D-866175205633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16CA2432-3C5D-4867-99F9-46ED72B447FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16CA2432-3C5D-4867-99F9-46ED72B447FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16CA2432-3C5D-4867-99F9-46ED72B447FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16CA2432-3C5D-4867-99F9-46ED72B447FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FC8B8813-BFEE-4EA2-B09D-866175205633} = {94894BD3-95C2-49E0-8D03-788B1D96AD8A}
+		{16CA2432-3C5D-4867-99F9-46ED72B447FA} = {ADFD40F3-FDDE-41E6-8FA5-3110F1CE73E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F59F07E-78B9-4CF2-930A-7B4810280902}
