@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PryAccesoDatos
 {
-    internal class ClsAccesoDatos
+    public class ClsAccesoDatos
     {
         #region VariablesPrivadas
         private SqlConnection _ObjSqlConnection; //Cadena de conexion
