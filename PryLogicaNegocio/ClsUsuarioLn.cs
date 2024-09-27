@@ -125,6 +125,19 @@ namespace PryLogicaNegocio
 
             Ejecutar(ref ObjUsuario);
         }
+
+        public void Validar(ref ClsUsuario objUsuario)
+        {
+            ObjDataBase = new ClsAccesoDatos()
+            {
+                NombreTabla = "usuario",
+                NombreSP = "[dbo].[Sp_ValidarUsuario]",
+                Scalar = false,
+            };
+            ObjDataBase.DtParametros.Rows.Add(@"@correo", "15", objUsuario.Correo);
+            ObjDataBase.DtParametros.Rows.Add(@"@contra", "15", objUsuario.Contraseña);
+            Ejecutar(ref objUsuario);
+        }
         #endregion
     }
 }

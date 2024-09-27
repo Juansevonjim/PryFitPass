@@ -83,5 +83,15 @@
   <ItemGroup>
     <None Include="Resources\image %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PryEntidades\PryEntidades.csproj">
+      <Project>{3b911a3b-6439-478c-b86e-afe48444f837}</Project>
+      <Name>PryEntidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PryLogicaNegocio\PryLogicaNegocio.csproj">
+      <Project>{a2007a4d-afc0-42f2-8ccd-9933c518e3a0}</Project>
+      <Name>PryLogicaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
