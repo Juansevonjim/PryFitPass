@@ -45,7 +45,7 @@ namespace PryAccesoDatos
             DtParametros.Columns.Add("Nombre");
             DtParametros.Columns.Add("TipoDato");
             DtParametros.Columns.Add("Valor");
-            //NombreBD = "BD_Nautica";
+            NombreBD = "FitPass";
         }
 
 
@@ -57,8 +57,8 @@ namespace PryAccesoDatos
         {
             switch (ObjDataBase.NombreBD)
             {
-                case "BD_Nautica":
-                    //ObjDataBase.ObjSqlConnection = new SqlConnection(PryAccesoDatos.Properties.Settings.Default.Valor);
+                case "FitPass":
+                    ObjDataBase.ObjSqlConnection = new SqlConnection(PryAccesoDatos.Properties.Settings.Default.Valor);
                     break;
             }
 
