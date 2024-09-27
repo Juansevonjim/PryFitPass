@@ -15,15 +15,7 @@ namespace PryEntidades
         private string mensajeError, valorScalar;
         private DataTable dtResultados;
 
-        public ClsUsuario(int id_tipo, int identificacion, int telefono, string nombre, string correo, string contraseña, string mensajeError, string valorScalar, DataTable dtResultados)
-        {
-            this.id_tipo = id_tipo;
-            this.identificacion = identificacion;
-            this.telefono = telefono;
-            this.nombre = nombre;
-            this.correo = correo;
-            this.contraseña = contraseña;
-        }
+        
 
         public int Id_tipo { get => id_tipo; set => id_tipo = value; }
         public int Identificacion { get => identificacion; set => identificacion = value; }
