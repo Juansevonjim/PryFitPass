@@ -34,8 +34,8 @@
             this.txtCorreoElectronico = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cblTipo = new System.Windows.Forms.CheckedListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,7 @@
             this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.Location = new System.Drawing.Point(55, 363);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(349, 38);
             this.txtContrasena.TabIndex = 4;
             this.txtContrasena.Enter += new System.EventHandler(this.txtContrasena_Enter);
@@ -108,16 +109,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "¡Bienvenido!";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PryPresentacion.Properties.Resources.image__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(454, 556);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // cblTipo
             // 
             this.cblTipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -132,6 +123,16 @@
             this.cblTipo.Size = new System.Drawing.Size(318, 118);
             this.cblTipo.TabIndex = 6;
             this.cblTipo.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cblTipo_ItemCheck);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PryPresentacion.Properties.Resources.image__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(454, 556);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmLogin
             // 
