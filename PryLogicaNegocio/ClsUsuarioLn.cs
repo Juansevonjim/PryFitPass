@@ -61,6 +61,7 @@ namespace PryLogicaNegocio
             }
         }
 
+
         #region MetodosCRUD
         public void Create(ref ClsUsuario ObjUsuario)
         {
@@ -131,7 +132,7 @@ namespace PryLogicaNegocio
             ObjDataBase = new ClsAccesoDatos()
             {
                 NombreTabla = "usuario",
-                NombreSP = "[dbo].[Sp_ValidarUsuario]",
+                NombreSP = "[Sp_ValidarUsuario]",
                 Scalar = false,
             };
             ObjDataBase.DtParametros.Rows.Add(@"@correo", "15", objUsuario.Correo);
