@@ -137,7 +137,7 @@ namespace PryPresentacion
                 Nombre = txtNombre.Text,
                 Correo = txtCorreo.Text,
                 Id_tipo = 3,
-                Contraseña=txtContrasena.Text,
+                Contraseña = txtContrasena.Text,
                 Telefono = Convert.ToInt32(txtTelefono.Text),
             };
             ObjUsuarioLn.Create(ref ObjUsuario);
