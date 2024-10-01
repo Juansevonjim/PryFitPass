@@ -68,49 +68,59 @@ namespace PryPresentacion
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+
             ObjUsuario = new ClsUsuario()
             {
                 Correo = txtCorreoElectronico.Text,
                 Contraseña = txtContrasena.Text,
             };
+
+            // Llamar a la función de validación
             ObjUsuarioLn.Validar(ref ObjUsuario);
 
+            // Verificar si hubo algún error en la base de datos o en la validación
             if (ObjUsuario.MensajeError == null)
             {
-                if (ObjUsuario.DtResultados.Rows.Count > 0)
+                // Verificamos si hay resultados en DtResultados (simulación de éxito)
+                if (ObjUsuario.DtResultados != null && ObjUsuario.DtResultados.Rows.Count == 0)
                 {
-                    MessageBox.Show("Bienvenido a la aplicacion FitPass " + ObjUsuario.Contraseña, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Bienvenido a la aplicación FitPass " + ObjUsuario.Correo, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Verificar el tipo de usuario seleccionado en cblTipo
                     foreach (var item in cblTipo.CheckedItems)
                     {
                         if (item.ToString() == "Administrativo")
                         {
-                            /*FrmMenu frmMenu = new FrmMenu();
+                            // Mostrar el menú correspondiente al usuario administrativo
+                            FrmMenu frmMenu = new FrmMenu();
                             frmMenu.Show();
-                            this.Hide();*/
+                            this.Hide();
                         }
                         else if (item.ToString() == "Cliente")
                         {
-                            /*FrmMenu frmMenu = new FrmMenu();
-                            frmMenu.Show();
-                            this.Hide();*/
+                            // Mostrar el menú correspondiente al cliente
+                             FrmMenu frmMenu = new FrmMenu();
+                             frmMenu.Show();
+                             this.Hide();
                         }
                         else if (item.ToString() == "Empleado/entrenador")
                         {
-                            /*FrmMenu frmMenu = new FrmMenu();
+                            //Mostrar el menú correspondiente al empleado/entrenador
+                            FrmMenu frmMenu = new FrmMenu();
                             frmMenu.Show();
-                            this.Hide();*/
+                            this.Hide();
                         }
                     }
-
                 }
                 else
                 {
-                    MessageBox.Show(ObjUsuario.MensajeError, "Usuario y/o Contraseña incorrecta ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Usuario y/o Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Error DB " + ObjUsuario.MensajeError);
+                // Mostrar el error si hubo un problema en la validación o base de datos
+                MessageBox.Show("Error DB: " + ObjUsuario.MensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
