@@ -14,6 +14,7 @@ namespace PryPresentacion
 {
     public partial class FrmLogin : Form
     {
+        private string correo;
         private ClsUsuario ObjUsuario = null;
         private readonly ClsUsuarioLn ObjUsuarioLn = new ClsUsuarioLn();
         public FrmLogin()
@@ -77,7 +78,7 @@ namespace PryPresentacion
 
             // Llamar a la función de validación
             ObjUsuarioLn.Validar(ref ObjUsuario);
-
+            correo = txtCorreoElectronico.Text;
             // Verificar si hubo algún error en la base de datos o en la validación
             if (ObjUsuario.MensajeError == null)
             {
@@ -92,21 +93,21 @@ namespace PryPresentacion
                         if (item.ToString() == "Administrativo")
                         {
                             // Mostrar el menú correspondiente al usuario administrativo
-                            FrmMenu frmMenu = new FrmMenu();
+                            FrmMenu frmMenu = new FrmMenu(correo);
                             frmMenu.Show();
                             this.Hide();
                         }
                         else if (item.ToString() == "Cliente")
                         {
                             // Mostrar el menú correspondiente al cliente
-                             FrmMenu frmMenu = new FrmMenu();
+                             FrmMenu frmMenu = new FrmMenu(correo);
                              frmMenu.Show();
                              this.Hide();
                         }
                         else if (item.ToString() == "Empleado/entrenador")
                         {
                             //Mostrar el menú correspondiente al empleado/entrenador
-                            FrmMenu frmMenu = new FrmMenu();
+                            FrmMenu frmMenu = new FrmMenu(correo);
                             frmMenu.Show();
                             this.Hide();
                         }
@@ -137,6 +138,13 @@ namespace PryPresentacion
                     }
                 }
             }
+        }
+
+        private void btnCrearCuenta_Click(object sender, EventArgs e)
+        {
+            FrmRegistro frmRegistro = new FrmRegistro();
+
+            frmRegistro.Show(); this.Hide();
         }
     }
 }

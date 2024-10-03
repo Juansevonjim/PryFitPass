@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cblTipo = new System.Windows.Forms.CheckedListBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.txtCorreoElectronico = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cblTipo = new System.Windows.Forms.CheckedListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCrearCuenta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +44,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.btnCrearCuenta);
             this.panel1.Controls.Add(this.cblTipo);
             this.panel1.Controls.Add(this.btnIniciarSesion);
             this.panel1.Controls.Add(this.txtContrasena);
@@ -54,11 +56,26 @@
             this.panel1.Size = new System.Drawing.Size(503, 556);
             this.panel1.TabIndex = 0;
             // 
+            // cblTipo
+            // 
+            this.cblTipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cblTipo.FormattingEnabled = true;
+            this.cblTipo.Items.AddRange(new object[] {
+            "Administrativo",
+            "Cliente",
+            "Empleado/Entrenador"});
+            this.cblTipo.Location = new System.Drawing.Point(64, 150);
+            this.cblTipo.Name = "cblTipo";
+            this.cblTipo.Size = new System.Drawing.Size(318, 118);
+            this.cblTipo.TabIndex = 6;
+            this.cblTipo.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cblTipo_ItemCheck);
+            // 
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarSesion.Location = new System.Drawing.Point(152, 456);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(55, 456);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(148, 46);
             this.btnIniciarSesion.TabIndex = 5;
@@ -109,21 +126,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "¡Bienvenido!";
             // 
-            // cblTipo
-            // 
-            this.cblTipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cblTipo.FormattingEnabled = true;
-            this.cblTipo.Items.AddRange(new object[] {
-            "Administrativo",
-            "Cliente",
-            "Empleado/Entrenador"});
-            this.cblTipo.Location = new System.Drawing.Point(64, 150);
-            this.cblTipo.Name = "cblTipo";
-            this.cblTipo.Size = new System.Drawing.Size(318, 118);
-            this.cblTipo.TabIndex = 6;
-            this.cblTipo.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cblTipo_ItemCheck);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PryPresentacion.Properties.Resources.image__1_;
@@ -133,6 +135,18 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnCrearCuenta
+            // 
+            this.btnCrearCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnCrearCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearCuenta.Location = new System.Drawing.Point(256, 456);
+            this.btnCrearCuenta.Name = "btnCrearCuenta";
+            this.btnCrearCuenta.Size = new System.Drawing.Size(148, 46);
+            this.btnCrearCuenta.TabIndex = 7;
+            this.btnCrearCuenta.Text = "Crear Cuenta";
+            this.btnCrearCuenta.UseVisualStyleBackColor = false;
+            this.btnCrearCuenta.Click += new System.EventHandler(this.btnCrearCuenta_Click);
             // 
             // FrmLogin
             // 
@@ -160,5 +174,6 @@
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckedListBox cblTipo;
+        private System.Windows.Forms.Button btnCrearCuenta;
     }
 }

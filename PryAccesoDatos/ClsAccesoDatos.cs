@@ -57,7 +57,7 @@ namespace PryAccesoDatos
         {
             switch (ObjDataBase.NombreBD)
             {
-                case "FitPass":
+                case "FitPass": 
                     ObjDataBase.ObjSqlConnection = new SqlConnection(PryAccesoDatos.Properties.Settings.Default.Valor);
                     break;
             }

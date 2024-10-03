@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmInicioUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInicioUsuario.Designer.cs">
+      <DependentUpon>FrmInicioUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,12 @@
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQR.Designer.cs">
+      <DependentUpon>FrmQR.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,8 +78,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmInicioUsuario.resx">
+      <DependentUpon>FrmInicioUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQR.resx">
+      <DependentUpon>FrmQR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistro.resx">
       <DependentUpon>FrmRegistro.cs</DependentUpon>
@@ -107,6 +128,9 @@
       <Project>{a2007a4d-afc0-42f2-8ccd-9933c518e3a0}</Project>
       <Name>PryLogicaNegocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,7 +28,7 @@ namespace PryLogicaNegocio
         }
         #endregion
 
-        private void Ejecutar(ref ClsUsuario ObjUsuario)
+        public void Ejecutar(ref ClsUsuario ObjUsuario)
         {
             ObjDataBase.CRUD(ref ObjDataBase);
 
@@ -118,12 +118,12 @@ namespace PryLogicaNegocio
         {
             ObjDataBase = new ClsAccesoDatos()
             {
-                NombreTabla = "usuario",
+                NombreTabla = "Usuario",
                 NombreSP = "[SP_Read_usuario]",
                 Scalar = false
 
             };
-            ObjDataBase.DtParametros.Rows.Add(@"@identificacion", "4", ObjUsuario.Identificacion);
+            ObjDataBase.DtParametros.Rows.Add(@"@correo", "15", ObjUsuario.Correo);
 
             Ejecutar(ref ObjUsuario);
         }
